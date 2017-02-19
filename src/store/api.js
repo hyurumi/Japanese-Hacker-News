@@ -1,5 +1,7 @@
 // this is aliased in webpack config based on server/client build
 import api from 'create-api'
+import original_api from 'create-original-api'
+import translation_api from 'create-translation-api'
 
 // warm the front page cache every 15 min
 // make sure to do this only once across all requests
@@ -22,9 +24,26 @@ function fetch (child) {
       api.child(child).once('value', snapshot => {
         const val = snapshot.val()
         // mark the timestamp when this item is cached
-        if (val) val.__lastUpdated = Date.now()
-        cache && cache.set(child, val)
-        resolve(val)
+        if (val) {
+          val.__lastUpdated = Date.now()
+          cache && cache.set(child, val)
+          resolve(val)
+        }else {
+          original_api.child(child).once('value', snapshot_original => {
+            const val_original = snapshot_original.val()
+            if (val_original && val_original.title) {
+              val_original.title = translation_api.translate(val_original.title).then((results) => {
+                console.log(results[0])
+                val_original.title = results[0];
+                if(val_original) val_original.__lastUpdated = Date.now()
+                cache && cache.set(child, val_original)
+                api.child(child).set(val_original)
+                resolve(val_original)
+              });
+            }
+            resolve(val_original)
+          });
+        }
       }, reject)
     })
   }

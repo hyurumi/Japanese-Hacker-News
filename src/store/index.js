@@ -13,9 +13,7 @@ const store = new Vuex.Store({
     lists: {
       top: [/* number */],
       new: [],
-      show: [],
-      ask: [],
-      job: []
+      show: []
     }
   },
 

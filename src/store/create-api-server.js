@@ -4,7 +4,7 @@ import { fetchItems } from './api'
 
 let api
 const config = {
-  databaseURL: 'https://hacker-news.firebaseio.com'
+  databaseURL: 'https://axiomatic-folio-98602.firebaseio.com/'
 }
 const version = '/v0'
 
@@ -23,7 +23,7 @@ if (process.__API__) {
 
   // cache the latest story ids
   api.cachedIds = {}
-  ;['top', 'new', 'show', 'ask', 'job'].forEach(type => {
+  ;['top', 'new', 'show'].forEach(type => {
     api.child(`${type}stories`).on('value', snapshot => {
       api.cachedIds[type] = snapshot.val()
     })

@@ -2,7 +2,7 @@ import Firebase from 'firebase/app'
 import 'firebase/database'
 
 const config = {
-  databaseURL: 'https://hacker-news.firebaseio.com'
+  databaseURL: 'https://axiomatic-folio-98602.firebaseio.com/'
 }
 const version = '/v0'
 

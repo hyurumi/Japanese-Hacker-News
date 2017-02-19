@@ -11,7 +11,9 @@ module.exports = Object.assign({}, base, {
   }),
   resolve: {
     alias: Object.assign({}, base.resolve.alias, {
-      'create-api': './create-api-server.js'
+      'create-api': './create-api-server.js',
+      'create-original-api': './create-original-api-server.js',
+      'create-translation-api': './create-translation-api-server.js'
     })
   },
   externals: Object.keys(require('../package.json').dependencies),
