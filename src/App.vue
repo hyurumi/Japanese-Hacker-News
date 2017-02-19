@@ -7,7 +7,6 @@
         </router-link>
         <router-link to="/top">Top</router-link>
         <router-link to="/new">New</router-link>
-        <router-link to="/show">Show</router-link>
       </nav>
     </header>
     <transition name="fade" mode="out-in">
