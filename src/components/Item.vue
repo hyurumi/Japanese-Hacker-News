@@ -1,6 +1,7 @@
 <template>
   <li class="news-item">
-    <span class="score">{{ item.score }}</span>
+    <span class="score">{{ item.score }} <br /> <a :href="'http://b.hatena.ne.jp/entry/' + item.url" class="hatena-bookmark-button" data-hatena-bookmark-layout="touch-counter" data-hatena-bookmark-width="40" data-hatena-bookmark-height="40" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+    <a data-pocket-label="pocket" data-pocket-count="none" class="pocket-btn" data-lang="en"></a>
     <span class="title">
       <template v-if="item.url">
         <a :href="item.url" target="_blank">{{ item.title }}</a>
