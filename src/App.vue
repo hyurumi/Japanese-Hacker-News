@@ -42,8 +42,8 @@ a
     max-width 800px
     box-sizing border-box
     margin 0px auto
-    float right
   a
+    float right
     color rgba(255, 255, 255, .8)
     line-height 24px
     transition color .15s ease
