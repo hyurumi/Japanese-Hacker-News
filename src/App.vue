@@ -8,7 +8,7 @@
         <router-link to="/top">Top</router-link>
         <router-link to="/new">New</router-link>
         <span class="hn">
-          <a href="https://news.ycombinator.com/">Hacker News の記事タイトルを Google 翻訳APIで自動翻訳したリストです</a>
+          <a href="https://news.ycombinator.com/">Hacker Newsの記事タイトルをGoogle翻訳APIで自動翻訳
         </span>
       </nav>
     </header>
@@ -64,7 +64,7 @@ a
       margin-right 0
   .hn
     color #fff
-    font-size .8em
+    font-size .6em
     margin 0
     float right
 
