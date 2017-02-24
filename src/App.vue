@@ -7,9 +7,7 @@
         </router-link>
         <router-link to="/top">Top</router-link>
         <router-link to="/new">New</router-link>
-        <span class="hn">
-          <a href="https://news.ycombinator.com/">Hacker Newsの記事タイトルをGoogle翻訳APIで自動翻訳
-        </span>
+        <a href="https://news.ycombinator.com/" class="hn">Hacker Newsの記事タイトルをGoogle翻訳APIで自動翻訳</a>
       </nav>
     </header>
     <transition name="fade" mode="out-in">
