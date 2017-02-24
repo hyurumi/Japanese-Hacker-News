@@ -7,6 +7,9 @@
         </router-link>
         <router-link to="/top">Top</router-link>
         <router-link to="/new">New</router-link>
+        <span class="hn">
+          <a href="https://news.ycombinator.com/">Hacker News の記事タイトルを Google 翻訳APIで自動翻訳したリストです</a>
+        </span>
       </nav>
     </header>
     <transition name="fade" mode="out-in">
@@ -29,42 +32,6 @@ body
 a
   color #34495e
   text-decoration none
-
-.footer
-  background-color #1CADE4
-  position fixed
-  z-index 999
-  height 20px
-  bottom 0
-  left 0
-  right 0
-  .inner
-    max-width 800px
-    box-sizing border-box
-    margin 0px auto
-  a
-    float right
-    color rgba(255, 255, 255, .8)
-    line-height 24px
-    transition color .15s ease
-    display inline-block
-    vertical-align middle
-    font-weight 100
-    font-size .7em
-    letter-spacing .075em
-    margin-right 1.8em
-    &:hover
-      color #fff
-    &.router-link-active
-      color #fff
-      font-weight 100
-    &:nth-child(6)
-      margin-right 0
-  .github
-    color #fff
-    font-size .9em
-    margin 0
-    float right
 
 .header
   background-color #1CADE4
@@ -95,9 +62,9 @@ a
       font-weight 400
     &:nth-child(6)
       margin-right 0
-  .github
+  .hn
     color #fff
-    font-size .9em
+    font-size .8em
     margin 0
     float right
 
