@@ -7,6 +7,7 @@
         </router-link>
         <router-link to="/top">Top</router-link>
         <router-link to="/new">New</router-link>
+        <a href="https://news.ycombinator.com/" class="hn">Hacker Newsの記事タイトルをGoogle翻訳APIで自動翻訳</a>
       </nav>
     </header>
     <transition name="fade" mode="out-in">
@@ -24,6 +25,7 @@ body
   padding-top 55px
   color #34495e
   overflow-y scroll
+  height: 100%
 
 a
   color #34495e
@@ -58,9 +60,9 @@ a
       font-weight 400
     &:nth-child(6)
       margin-right 0
-  .github
+  .hn
     color #fff
-    font-size .9em
+    font-size .6em
     margin 0
     float right
 
