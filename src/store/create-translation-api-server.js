@@ -1,7 +1,7 @@
 let translation_api
 const googleTranslate = require('@google-cloud/translate')
 const translateClient = googleTranslate({
-  key: 'AIzaSyD4tOiDK19rzKGeBFmjzIfdTuWT93MCGi0'
+  projectId: 'hacker-news-jp'
 });
 
 translation_api = {
